@@ -1,0 +1,39 @@
+<!doctype html>
+<head>
+    {% if css %}
+    <link rel="stylesheet" type="text/css" href="{{ css }}">
+    {% endif %}
+</head>
+<body>
+    <div id="main">
+        <h1 id="title">{{ title }}</h1>
+        <p>{{ subtitle }}</p>
+
+        {% if image %}
+        <figure id="img-div">
+            <img id="image" src="{{ image["url"] }}">
+            <figcaption id="img-caption">
+                {{ image["caption"] }}
+            </figcaption>
+        </figure>
+        {% endif %}
+
+        {% if awards %}
+        <h2>List of achievements</h2>
+        <ul id="ulist" class="awards_list">
+            {% for award in awards %}
+            <li id="{{ award["year"] }}" class="award_row">
+                <span>{{ award["year"] }}</span> - {{ award["title"] }}
+            </li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+
+        {% if read_more %}
+        <a id="tribute-link" href="{{ read_more }}" target="_blank">
+            Read More at this Wikipedia page
+        </a>
+        {% endif %}
+    </div>
+</body>
+</html>

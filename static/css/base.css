@@ -1,0 +1,42 @@
+#main {
+    background: linear-gradient(
+        90deg,
+        rgba(14, 13, 13, 0.5),
+        rgba(128,64,32,0.6),
+        rgba(64,32,16,0.5)
+    );
+    text-align: center;
+}
+
+#img-div {
+    position: relative;
+    background: linear-gradient(rgba(85, 53, 53, 0.5), rgba(255,255,255,.5));
+}
+
+#img-caption {
+    background-color: darksalmon;
+}
+
+#image {
+    max-width: 100%;
+    height: auto;
+}
+#image_bg {
+    margin: auto;
+    max-width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.awards_list {
+    margin: auto;
+    width: 60%;
+    text-align: left;
+    list-style-type: none;
+}
+
+.award_row span {
+    background-color: rgb(144, 116, 50);
+}
+
